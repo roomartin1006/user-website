@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: #f0f0f0"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="P01_index.html"
+            ><img src="img/Rock-Logo.png" alt="img" class="logo" role="button"
+          /></a>
+
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="P01_index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="P01_about_us.html">Admin Page</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="P01_cat_A.html">Category A</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="P01_cat_B.html">Category B</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="d-flex ms-0">
+            <div class="col">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                style="width: 400px"
+              />
+            </div>
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+                role="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-person-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                Log In
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="P01_cart.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-cart-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="loginModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-form">
+              <form>
+                <div class="form-components mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                    <span class="input-group-text">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-person-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="form-components mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="input-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="Enter your password"
+                      required
+                    />
+                    <span class="input-group-text">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-key-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="form-components mb-3">
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="remember"
+                    />
+                    <label class="form-check-label" for="remember"
+                      >Remember</label
+                    >
+                  </div>
+                </div>
+                <div class="form-components mb-1" style="text-align: center">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <p class="mb-0">
+                Don't have an account?
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signUpModal"
+                  data-bs-target="#signupModal"
+                  >Sign up here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="signUpModal"
+        tabindex="-1"
+        aria-labelledby="signupModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-form">
+              <form>
+                <div class="row">
+                  <div class="col-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="passwordConfirm"
+                    class="form-control"
+                    placeholder="Confirm password"
+                    required
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <div class="form-components mb-1" style="text-align: right">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mt-5">
+      <h1 class="mb-4">Admin Panel</h1>
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <select id="categoryFilter" class="form-select">
+            <option value="">All Categories</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <input
+            type="number"
+            id="minPrice"
+            class="form-control"
+            placeholder="Min Price"
+          />
+        </div>
+        <div class="col-md-3">
+          <input
+            type="number"
+            id="maxPrice"
+            class="form-control"
+            placeholder="Max Price"
+          />
+        </div>
+        <div class="col-md-3">
+          <button id="filterBtn" class="btn btn-primary">Filter</button>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="productsTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="text-center mb-4">
+      <button
+        type="button"
+        class="btn btn-primary mt-3"
+        data-bs-toggle="modal"
+        data-bs-target="#addProductModal"
+      >
+        Add New Product
+      </button>
+    </div>
+
+    <div
+      class="modal fade"
+      id="addProductModal"
+      tabindex="-1"
+      aria-labelledby="addProductModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addProductModalLabel">
+              Add New Product
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="addProductForm">
+              <div class="mb-3">
+                <label for="productName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="productDescription" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="productDescription"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="productPrice" class="form-label"
+                  >Price Per Unit</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="productPrice"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="productStock" class="form-label">Stock</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="productStock"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="productCategory" class="form-label">Category</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productCategory"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="productImageUrl" class="form-label"
+                  >Image URL</label
+                >
+                <input
+                  type="url"
+                  class="form-control"
+                  id="productImageUrl"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="productUnit" class="form-label">Unit</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productUnit"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="editProductModal"
+      tabindex="-1"
+      aria-labelledby="editProductModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="editProductForm">
+              <input type="hidden" id="editProductUuid" />
+              <div class="mb-3">
+                <label for="editProductName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editProductName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="editProductDescription" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="editProductDescription"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="editProductPrice" class="form-label"
+                  >Price Per Unit</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="editProductPrice"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="editProductStock" class="form-label">Stock</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="editProductStock"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="editProductCategory" class="form-label"
+                  >Category</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editProductCategory"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="editProductImageUrl" class="form-label"
+                  >Image URL</label
+                >
+                <input
+                  type="url"
+                  class="form-control"
+                  id="editProductImageUrl"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="editProductUnit" class="form-label">Unit</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editProductUnit"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Edit Product
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main></main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Integrated Assignment 4 Script -->
+    <script src="product_manager.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+.logo {
+    width: 50px;
+    height: auto;
+  }
+
+  #customCarousel {
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .card-img-top {
+    max-height: 200px;
+    min-height: 150px;
+    object-fit: cover;
+  }
+
+  .productsContainer {
+    margin-top: 30px;
+  }
+
+  .custom-card {
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .page-explorer {
+    justify-content: center;
+  }
+
+  #loginModal .modal-dialog,
+  #signUpModal .modal-dialog {
+    max-width: 370px;
+  }
+
+  #loginModal .modal-form,
+  #signUpModal .modal-form {
+    margin: 20px;
+  }
+
+  #loginModal .modal-footer,
+  #signUpModal .modal-footer {
+    justify-content: center;
+  }
+
+  .btn.btn-primary {
+    height: min-content;
+  }
+
+  .modal-content {
+    border-radius: 10px;
+  }
+
+  .modal-title {
+    font-weight: bold;
+  }
+
+  .modal-body {
+    text-align: center;
+  }
+
+  .modal-footer {
+    justify-content: center;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    color: #000;
+    opacity: 0.5;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .close:hover {
+    opacity: 1;
+  }
+
+  .quantity-label {
+    font-size: 1.1rem; 
+  }
+
+  .product-card {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+} 
+
+.product-image {
+    min-height: 60px;
+    max-height: 120px;
+    min-width: 80px;
+    max-width: 160px;
+    object-fit: cover;
+}
+
+.summary-card {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.summary {
+    border-top: 1px solid #dee2e6;
+    padding-top: 10px;
+    margin-top: 10px;
+} 
+
