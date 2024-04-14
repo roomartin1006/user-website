@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+
+        #customCarousel {
+            width: 100%;
+            height: 60vh;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            max-height: 200px;
+            min-height: 150px;
+            object-fit: cover;
+        }
+
+        .productsContainer {
+            margin-top: 30px;
+        }
+
+        .custom-card {
+            height: 100%;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .page-explorer {
+            justify-content: center;
+        }
+
+        #loginModal .modal-dialog {
+            max-width: 370px;
+        }
+
+        #loginModal .modal-form {
+            margin: 20px; 
+        }
+
+        #loginModal .modal-footer {
+            justify-content: center;
+        }   
+        
+        #signUpModal .modal-form {
+            margin: 20px; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #f0f0f0;">
+            <div class="container-fluid">
+        
+                <a class="navbar-brand" href="P01_index.html"><img src="img/Rock-Logo.png" alt="img" class="logo" role="button"></a>
+        
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="P01_index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="P01_about_us.html">Admin Page</a>
+                    </li>
+        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="P01_cat_A.html">Category A</a></li>
+                            <li><a class="dropdown-item" href="P01_cat_B.html">Category B</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        
+                <form class="d-flex ms-0">
+                    <div class="col">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            style="width: 400px;">
+                    </div>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+        
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                 
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" role="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                            Log In
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="P01_cart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-form">
+                        <form>
+                            <div class="form-components mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-components mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password"  placeholder="Enter your password" required>
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-components mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="remember">
+                                    <label class="form-check-label" for="remember">Remember</label>
+                                </div>
+                            </div>
+                            <div class="form-components mb-1" style = "text-align: center;">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <p class="mb-0">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signUpModal"
+                                data-bs-target="#signupModal">Sign up here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="First Name" required>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Password" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="passwordConfirm" class="form-control" placeholder="Confirm password" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-components mb-1" style="text-align: right;">
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <h1 class="categorya-header mt-4 mb-3">Category A</h1>
+
+    <div class="container productsContainer mt-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+            <div class="col">
+                <div class="card custom-card" style="width: 18rem;">
+                    <img src="img/Rock1.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h2>Pretty Rock</h2>
+                        <p class="card-text">This rock is so pretty. Buy it and everyone will be jealous of you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card custom-card" style="width: 18rem;">
+                    <img src="img/Rock3.webp" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h2>Ripped Rock</h2>
+                        <p class="card-text">Perfect for all you gym bros out there. This rock works out 8 days a week.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card custom-card" style="width: 18rem;">
+                    <img src="img/TheRock.webp" class="card-img-top" alt="Product 5">
+                    <div class="card-body">
+                        <h2>The Rock</h2>
+                        <p class="card-text">The Rock.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card custom-card" style="width: 18rem;">
+                    <img src="img/Rock6.jpg" class="card-img-top" alt="Product 6">
+                    <div class="card-body">
+                        <h2>Magic Rock</h2>
+                        <p class="card-text">It levitates and tells you the future. Super rare rock found somewhere in the Amazon forest.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card custom-card" style="width: 18rem;">
+                    <img src="img/Rock8.jpg" class="card-img-top" alt="Product 8">
+                    <div class="card-body">
+                        <h2>Boring Rock</h2>
+                        <p class="card-text">Boring rock. Perfect for engineering students.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example" class="page-explorer mx-auto mt-4 d-flex">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+   
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

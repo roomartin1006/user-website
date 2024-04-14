@@ -1,0 +1,74 @@
+@host = https://products-dasw.onrender.com
+@expediente = 744661
+
+###
+POST {{host}}/api/products
+x-expediente: {{expediente}}
+x-auth: admin
+Content-Type: application/json
+
+{
+"name": "Cooler Rock",
+"description": "It's just like any other regular rock, exceot it's cooler because I say so.",
+"pricePerUnit": 50.50,
+"stock": 120,
+"category": "Category B",
+"imageUrl": "https://media.istockphoto.com/id/170215830/photo/limestone.jpg?s=612x612&w=0&k=20&c=qkOXtIKgSbjSSWGPQdD-KAlh1_C5-U_B6_WpWMTRDzo=",
+"unit": "pieces"
+}
+
+###
+GET  {{host}}/api/products
+x-expediente: {{expediente}}
+x-auth: admin
+
+###
+GET {{host}}/api/products/C2Wpt1XUhsp_9ApaINRS0
+x-expediente: {{expediente}}
+
+
+###
+PUT {{host}}/api/products/nGXwxfJWJPZ2GGof-eP8W
+x-expediente: {{expediente}}
+x-auth: admin
+Content-Type: application/json
+
+{
+"name": "Pretty Rock",
+"description": "Icredibely pretty rock that will cause jealousy beyond your imagination!",
+"pricePerUnit": 69.99,
+"stock": 102,
+"category": "Category A",
+"imageUrl": "https://mobileimages.lowes.com/productimages/d2404c8d-fa0b-45f0-b303-0f32594782ca/49467397.jpg",
+"unit": "pieces"
+}
+
+###
+
+DELETE {{host}}/api/products/pu-mtzBq8OEkBO_JKiYc1
+x-expediente: {{expediente}}
+x-auth: admin
+Content-Type: application/json
+
+### you must put the user's email in x-user
+
+GET  {{host}}/api/cart
+x-expediente: {{expediente}}
+x-user: a@a.com
+
+### use a valid id in the url
+POST   {{host}}/api/cart/40Ey9ifLAQncACLomEo77
+x-expediente: {{expediente}}
+x-user: user@test.com
+Content-Type: application/json
+
+{
+    "amount": 2
+}
+
+###
+
+DELETE   {{host}}/api/cart/40Ey9ifLAQncACLomEo77
+x-expediente: {{expediente}}
+x-user: user@test.com
+
